@@ -22,7 +22,7 @@ const FormExchange = () => {
     const onChangeUah = (e) => {
         if (!e.currentTarget.value) {
             setUsd(0);
-            setUah(0);
+            setUah(e.currentTarget.value);
             return;
         }
         let value = +e.currentTarget.value;
@@ -31,7 +31,7 @@ const FormExchange = () => {
     }
     const onChangeUsd = (e) => {
         if (!e.currentTarget.value) {
-            setUsd(0);
+            setUsd(e.currentTarget.value);
             setUah(0);
             return;
         }
